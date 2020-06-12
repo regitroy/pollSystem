@@ -5,7 +5,7 @@ module.exports = {
         type: mongoose.Schema.ObjectId,
         index: true
     },
-    userId: {
+    userId: { // for option suggestion
         type: mongoose.Schema.ObjectId,
         index: true
     },
