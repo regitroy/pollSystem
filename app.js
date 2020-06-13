@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const core = require('./core');
 const config = require('./configs');
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -17,4 +18,4 @@ app.use((err, req, res, next) => {
     res.json({ suc: false, error: err.message });
 });
 
-app.listen(3000, () => console.log(`app listening on port!`))
+app.listen(port, () => console.log(`app listening on port!`))
